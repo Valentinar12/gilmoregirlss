@@ -1,0 +1,268 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Helvetica', sans-serif;
+    background-color: #fef6ee;
+    color: #3e2c1c;
+  }
+  /* Animación de entrada para el encabezado */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .header {
+    background-color: #6b3b1f;
+    color: white;
+    font-family: 'Helvetica', sans-serif;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Estilo y animación para la parte superior del encabezado */
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+  }
+  
+  /* Estilo para el logo */
+  .logo {
+    font-family: serif;
+    font-weight: normal;
+    font-size: 1.8rem;
+    margin: 0;
+  }
+  .logo a {
+    text-decoration: none; /* Sin subrayado */
+    color: inherit; /* Toma el color del h1 */
+  }
+  
+  /* Estilo y animación para los íconos */
+  .icons {
+    display: flex;
+    gap: 0.5rem;
+    margin-right: 0.5em;
+  }
+  
+  .icons img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+  }
+  
+  .icons img:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Estilo para la barra de navegación */
+  .nav {
+    background-color: #f3e7db;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.8rem 0;
+    border-top: 1px solid #d6c1b0;
+    border-bottom: 1px solid #d6c1b0;
+  }
+  
+  /* Estilo y animación para los enlaces de navegación */
+  .nav a {
+    color: #3e2c1c;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #3e2c1c;
+    transition: width 0.3s ease;
+  }
+  
+  .nav a:hover {
+    color: #6b3b1f;
+  }
+  
+  .nav a:hover::after {
+    width: 100%;
+  }
+
+  .sinopsis {
+   
+    color: #3d2c1e;
+    background-color: #fefaf7;
+  }
+  
+  .hero {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    
+  }
+  
+  .hero img {
+    width: 100%;
+   
+  }
+  .hero-row {
+    display: flex;
+    width: 100%;
+  }
+  
+  .hero-row img {
+    width: 33.33%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  
+  .sinopsis-text {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    text-align: justify;
+  }
+
+
+  .sinopsis-text h2 {
+    text-align: center;
+    color: #7a4b2d;
+    margin-bottom: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-bottom: 2px solid #cba580;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+  }
+  
+  .sinopsis-text p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  
+  .sinopsis {
+    background-image: url('../imagenes/flores4.JPG');
+    background-repeat: repeat;
+    background-size: contain;
+    padding: 3rem 1rem;
+  }
+  
+  .sinopsis-caja {
+    background-color: #fef6ee;
+    padding: 2rem;
+    max-width: 850px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+  }
+
+
+  .curiosidades {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+  }
+  
+  .curiosidades h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .curiosidades ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .curiosidades li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+  
+  .curiosidades li img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-top: 4px;
+  }
+  
+
+
+
+
+
+
+
+
+  .footer {
+    background-color: #6b3b1f; /* Color marrón */
+    padding: 20px 0;
+    color: white;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .footer-logo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 1.8rem;
+    margin: 0;
+    color: #f5ebdf;
+  }
+  
+  .footer-logo h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-family: serif;
+  }
+  
+  .footer-logo img {
+    width: 20px;
+    margin-top: 8px;
+    position: relative;
+    left: 3em;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .footer-links a {
+    color: #f5ebdf;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .footer-social {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .footer-social img {
+    width: 25px;
+    height: 20px;
+  }
+  
+  

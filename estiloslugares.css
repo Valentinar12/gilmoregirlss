@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Helvetica', sans-serif;
+    background-color: #fef6ee;
+    color: #3e2c1c;
+  }
+  
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .header {
+    background-color: #6b3b1f;
+    color: white;
+    font-family: 'Helvetica', sans-serif;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+ 
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+  }
+  
+  .logo {
+    font-family: serif;
+    font-weight: normal;
+    font-size: 1.8rem;
+    margin: 0;
+  }
+  .logo a {
+    text-decoration: none; /* Sin subrayado */
+    color: inherit; /* Toma el color del h1 */
+  }
+  
+  
+  .icons {
+    display: flex;
+    gap: 0.5rem;
+    margin-right: 0.5em;
+  }
+  
+  .icons img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+  }
+  
+  .icons img:hover {
+    transform: scale(1.2);
+  }
+  
+  
+  .nav {
+    background-color: #f3e7db;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.8rem 0;
+    border-top: 1px solid #d6c1b0;
+    border-bottom: 1px solid #d6c1b0;
+  }
+  
+  
+  .nav a {
+    color: #3e2c1c;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #3e2c1c;
+    transition: width 0.3s ease;
+  }
+  
+  .nav a:hover {
+    color: #6b3b1f;
+  }
+  
+  .nav a:hover::after {
+    width: 100%;
+  }
+
+  .lugar-iconico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .carrusel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .carrusel .imagenes {
+    display: flex;
+    animation: scroll 20s linear infinite;
+    width: calc(500px * 10); /* ¡OJO! Se duplican las imágenes (5x2 = 10) */
+  }
+  
+  .carrusel img {
+    width: 500px; /* Cada imagen ahora mide 500px */
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  /* Animación */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%); /* Se mueve la mitad del contenedor */
+    }
+  }
+  
+  .lugar-iconico {
+    background-image: url('../imagenes/flores4.JPG'); /* O ajusta la ruta si está en otra carpeta */
+    background-repeat: repeat;
+    background-size: contain; /* O 'cover' si prefieres que llene todo */
+    
+  }
+  
+  .lugar-iconico .info {
+    background-color: #fefaf0; /* tono crema */
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: justify;
+  }
+  
+  
+  
+  .info {
+    max-width: 800px;
+    margin-top: 2rem;
+    text-align: left;
+  }
+  
+  .info h2 {
+    text-align: center;
+    color: #7a4b2d;
+    margin-bottom: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-bottom: 2px solid #cba580;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+  }
+  
+  .info h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .info p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  
+
+  .footer {
+    background-color: #6b3b1f; /* Color marrón */
+    padding: 20px 0;
+    color: white;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .footer-logo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 1.8rem;
+    margin: 0;
+    color: #f5ebdf;
+  }
+  
+  .footer-logo h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-family: serif;
+  }
+  
+  .footer-logo img {
+    width: 20px;
+    margin-top: 8px;
+    position: relative;
+    left: 3em;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .footer-links a {
+    color: #f5ebdf;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .footer-social {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .footer-social img {
+    width: 25px;
+    height: 20px;
+  }
+  
+  
